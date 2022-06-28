@@ -1,0 +1,11 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.square {
+    width: 16px;
+    height: 16px;
+    background-color: red;
+    display: inline-block;
+}
