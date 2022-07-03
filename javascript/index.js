@@ -1,29 +1,34 @@
 let isDrawing = null
 let squares = document.querySelectorAll(".square")
-
-for (let square of squares){
-  square.addEventListener("mousemove", (e) => {
-    if (isDrawing){
-      e.target.style.backgroundColor = "black"
-    }
-      e.target.style.opacity = ".5"
-  });
-
-  square.addEventListener("mouseleave", (e) => {
-    e.target.style.opacity = "1"
-  });
-}
-
+let drawingArea = document.querySelector(".drawingArea")
 
 // Check when mouse is held down
 window.addEventListener("mousedown", () => {
   isDrawing = true;
 });
 
-// Mouse up
+// Check when mouse is held down
 window.addEventListener("mouseup", () => {
   isDrawing = false;
 });
+
+//For loop through each "square"
+for (let square of squares){
+  //Event lisnter for "Mouse move"
+  square.addEventListener("mousemove", (e) => {
+    e.target.style.opacity = ".5"
+    if (isDrawing){
+      e.target.style.backgroundColor = "black"
+    }
+  });
+
+  //Event listener for "Mouse leave"
+  square.addEventListener("mouseleave", (e) => {
+    e.target.style.opacity = "1"
+  });
+}
+
+
 
 
 
