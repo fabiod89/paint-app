@@ -2,7 +2,7 @@ let isDrawing = null
 
 let drawingArea = document.querySelector("#drawingArea")
 
-let gridSize = 56
+let gridSize = 16
 let cellSize = gridSize * gridSize
 
 var div = document.createElement("div");
@@ -10,11 +10,8 @@ div.className = "square";
 
 
 
-drawingArea.innerHTML += div.innerHTML
 
 let root = document.documentElement;
-
-
 
 for (let i=0 ; i < cellSize ; i++){
   var div = document.createElement("div");
