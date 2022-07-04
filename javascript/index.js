@@ -2,7 +2,7 @@ let isDrawing = null
 
 let drawingArea = document.querySelector("#drawingArea")
 
-let gridSize = 16
+let gridSize = 60
 let cellSize = gridSize * gridSize
 
 var div = document.createElement("div");
@@ -38,7 +38,6 @@ let squares = document.querySelectorAll(".square")
 for (let square of squares){
   //Event lisnter for "Mouse move"
   square.addEventListener("mousemove", (e) => {
-    e.target.style.opacity = ".5"
     if (isDrawing){
       e.target.style.backgroundColor = "black";
     }
@@ -49,10 +48,6 @@ for (let square of squares){
     e.target.style.backgroundColor = "black";
   });
 
-  //Event listener for "Mouse leave"
-  square.addEventListener("mouseleave", (e) => {
-    e.target.style.opacity = "1";
-  });
 }
 
 

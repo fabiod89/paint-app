@@ -5,6 +5,7 @@
     border: 0px;
 }
 
+/* CSS for main drawing area (grid) */
 #drawingArea{
     height:500px;
     width:500px;
@@ -13,24 +14,17 @@
     display: inline-grid;
     grid-template-columns: repeat(var(--cellSize), 1fr);
     grid-template-rows: repeat(var(--cellSize), 1fr);
-
 }
 
+
+/* Style for each square inside grid */
 #drawingArea .square {
     width: 100%;
     height: 0;
     padding-top: 100%;
     background-color: red;
-
-
-
-
-
-
-
-    
-
-
-
 }
 
+#drawingArea .square:hover{
+    opacity: .5;
+}
