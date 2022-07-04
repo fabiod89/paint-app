@@ -18,13 +18,18 @@ for (let square of squares){
   square.addEventListener("mousemove", (e) => {
     e.target.style.opacity = ".5"
     if (isDrawing){
-      e.target.style.backgroundColor = "black"
+      e.target.style.backgroundColor = "black";
     }
+  });
+
+  //Event lisnter for "Mouse down"
+  square.addEventListener("mousedown", (e) => {
+    e.target.style.backgroundColor = "black";
   });
 
   //Event listener for "Mouse leave"
   square.addEventListener("mouseleave", (e) => {
-    e.target.style.opacity = "1"
+    e.target.style.opacity = "1";
   });
 }
 
