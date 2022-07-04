@@ -5,7 +5,6 @@
     border: 0px;
 }
 
-
 #drawingArea{
     height:500px;
     width:500px;
@@ -17,7 +16,7 @@
 
 }
 
-.square {
+#drawingArea .square {
     width: 100%;
     height: 0;
     padding-top: 100%;
