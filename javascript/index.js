@@ -1,6 +1,30 @@
 let isDrawing = null
-let squares = document.querySelectorAll(".square")
-let drawingArea = document.querySelector(".drawingArea")
+
+let drawingArea = document.querySelector("#drawingArea")
+
+let gridSize = 32
+let cellSize = gridSize * gridSize
+
+var div = document.createElement("div");
+div.className = "square";
+
+
+
+drawingArea.innerHTML += div.innerHTML
+
+let root = document.documentElement;
+
+
+
+for (let i=0 ; i < cellSize ; i++){
+  var div = document.createElement("div");
+  div.className = "square";
+  drawingArea.appendChild(div)
+}
+
+root.style.setProperty('--cellSize', gridSize);
+
+
 
 // Check when mouse is held down
 window.addEventListener("mousedown", () => {
@@ -13,6 +37,7 @@ window.addEventListener("mouseup", () => {
 });
 
 //For loop through each "square"
+let squares = document.querySelectorAll(".square")
 for (let square of squares){
   //Event lisnter for "Mouse move"
   square.addEventListener("mousemove", (e) => {
