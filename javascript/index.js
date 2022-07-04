@@ -7,18 +7,12 @@ let cellSize = gridSize * gridSize
 
 var div = document.createElement("div");
 div.className = "square";
-
-
-
-
 let root = document.documentElement;
-
 for (let i=0 ; i < cellSize ; i++){
   var div = document.createElement("div");
   div.className = "square";
   drawingArea.appendChild(div)
 }
-
 root.style.setProperty('--cellSize', gridSize);
 
 
