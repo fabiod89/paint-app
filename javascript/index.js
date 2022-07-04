@@ -2,7 +2,7 @@ let isDrawing = null
 
 let drawingArea = document.querySelector("#drawingArea")
 
-let gridSize = 60
+let gridSize = 60;
 let cellSize = gridSize * gridSize
 
 var div = document.createElement("div");
