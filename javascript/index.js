@@ -1,18 +1,23 @@
 let isDrawing = null
 
-let drawingArea = document.querySelector("#drawingArea")
+let drawingArea = document.querySelector("#drawingArea");
+let gridSize = 16; //default value
 
-let gridSize = 60;
-let cellSize = gridSize * gridSize
-
+const cellSize = gridSize * gridSize;
+//variable for each "square" within grid
 var div = document.createElement("div");
 div.className = "square";
-let root = document.documentElement;
+
+// this will create the grid in the drawing area
+const root = document.documentElement;
 for (let i=0 ; i < cellSize ; i++){
-  var div = document.createElement("div");
+  let div = document.createElement("div");
   div.className = "square";
-  drawingArea.appendChild(div)
+  drawingArea.appendChild(div);
 }
+
+// this is used to adjust CSS grid based on
+// gridSize variable
 root.style.setProperty('--cellSize', gridSize);
 
 
@@ -28,7 +33,7 @@ window.addEventListener("mouseup", () => {
 });
 
 //For loop through each "square"
-let squares = document.querySelectorAll(".square")
+let squares = document.querySelectorAll(".square");
 for (let square of squares){
   //Event lisnter for "Mouse move"
   square.addEventListener("mousemove", (e) => {
