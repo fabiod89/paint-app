@@ -1,5 +1,12 @@
 let isDrawing = null
 
+
+let blackButton = document.querySelector("#blackButton")
+let colorButton = document.querySelector("#colorButton")
+let eraserButton = document.querySelector("#eraserButton")
+
+
+
 let drawingArea = document.querySelector("#drawingArea");
 let gridSize = 16; //default value
 
