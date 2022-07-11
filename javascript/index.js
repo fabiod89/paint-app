@@ -33,15 +33,12 @@ root.style.setProperty('--cellSize', gridSize);
 // Check when mouse is held down
 window.addEventListener("mousedown", () => {
   isDrawing = true;
+
 });
 
 // Check when mouse is held down
 window.addEventListener("mouseup", () => {
   isDrawing = false;
-});
-
-
-
 if (blackButton){
   color = "black"
 }else if (colorButton){
@@ -49,6 +46,11 @@ if (blackButton){
 }else if (eraserButton){
   color = "white" 
 }
+});
+
+
+
+
 
 
 
