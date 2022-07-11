@@ -5,6 +5,7 @@ let blackButton = document.querySelector("#blackButton")
 let colorButton = document.querySelector("#colorButton")
 let eraserButton = document.querySelector("#eraserButton")
 
+let color = null
 
 
 let drawingArea = document.querySelector("#drawingArea");
@@ -39,6 +40,18 @@ window.addEventListener("mouseup", () => {
   isDrawing = false;
 });
 
+
+
+if (blackButton){
+  color = "black"
+}else if (colorButton){
+  color = "red" 
+}else if (eraserButton){
+  color = "white" 
+}
+
+
+
 //For loop through each "square"
 let squares = document.querySelectorAll(".square");
 for (let square of squares){
@@ -55,7 +68,6 @@ for (let square of squares){
   });
 
 }
-
 
 
 
