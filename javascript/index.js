@@ -64,7 +64,7 @@ for (let square of squares){
 
   //Event lisnter for "Mouse down"
   square.addEventListener("mousedown", (e) => {
-    e.target.style.backgroundColor = "black";
+    e.target.style.backgroundColor = color;
   });
 
 }
