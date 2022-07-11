@@ -58,7 +58,7 @@ for (let square of squares){
   //Event lisnter for "Mouse move"
   square.addEventListener("mousemove", (e) => {
     if (isDrawing){
-      e.target.style.backgroundColor = "black";
+      e.target.style.backgroundColor = color;
     }
   });
 
