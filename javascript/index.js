@@ -1,11 +1,13 @@
 let isDrawing = null
-
-
 let blackButton = document.querySelector("#blackButton")
 let colorButton = document.querySelector("#colorButton")
 let eraserButton = document.querySelector("#eraserButton")
 
 let color = null
+
+blackButton.addEventListener("change", () => {color = "black"})
+colorButton.addEventListener("change", () => {color = "red"})
+eraserButton.addEventListener("change", () => {color = "white"})
 
 
 let drawingArea = document.querySelector("#drawingArea");
@@ -34,23 +36,28 @@ root.style.setProperty('--cellSize', gridSize);
 window.addEventListener("mousedown", () => {
   isDrawing = true;
 
+
+
 });
 
 // Check when mouse is held down
 window.addEventListener("mouseup", () => {
   isDrawing = false;
-if (blackButton){
-  color = "black"
-}else if (colorButton){
-  color = "red" 
-}else if (eraserButton){
-  color = "white" 
-}
+
+
+
 });
 
 
 
-
+function generateRandomColor() {
+  var letters = '0123456789ABCDEF';
+  var color = '#';
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
 
 
 
@@ -60,6 +67,9 @@ for (let square of squares){
   //Event lisnter for "Mouse move"
   square.addEventListener("mousemove", (e) => {
     if (isDrawing){
+      if (colorButton.checked){
+        color = generateRandomColor()
+      }
       e.target.style.backgroundColor = color;
     }
   });
