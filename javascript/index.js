@@ -3,9 +3,10 @@ let blackButton = document.querySelector("#blackButton")
 let colorButton = document.querySelector("#colorButton")
 let eraserButton = document.querySelector("#eraserButton")
 let clearButton = document.querySelector("#clearButton")
-
 let color = "black" //default value
 
+
+//Event listerns for "color" buttons
 blackButton.addEventListener("change", () => {color = "black"})
 colorButton.addEventListener("change", () => {color = "red"})
 eraserButton.addEventListener("change", () => {color = "white"})
