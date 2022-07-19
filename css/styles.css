@@ -14,8 +14,10 @@
     align-items: center;
 }
 
+
+
 #buttonsMenu label{
-    padding-right: 20px;
+    padding-right: 70px;
     padding-left: 5px;
 }
 
@@ -46,3 +48,22 @@
     opacity: .5;
     background-color: black;
 }
+
+#bottomMenu{
+    height:70px;
+    width:100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+#bottomMenu button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
