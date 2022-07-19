@@ -21,7 +21,6 @@ div.className = "square";
 
 // this will create the grid in the drawing area
 const root = document.documentElement;
-console.log("hey")
 for (let i=0 ; i < cellSize ; i++){
   let div = document.createElement("div");
   div.className = "square";
